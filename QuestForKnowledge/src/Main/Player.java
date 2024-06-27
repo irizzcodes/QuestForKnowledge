@@ -3,6 +3,13 @@ package Main;
 public class Player {
 	GameManager gm;
 	
+	public boolean hasLearnAddition;
+	public boolean hasLearnSubtraction;
+	public boolean hasLearnMultiplication;
+	public boolean hasStudyAddition;
+	public boolean hasStudySubtraction;
+	public boolean hasStudyMultiplication;
+	
 	public int playerMaxKey;
 	public int playerKey;
 	
@@ -14,6 +21,13 @@ public class Player {
 	}
 	
 	public void setPlayerDefaultStatus() {
+		hasLearnAddition = false; 
+		hasLearnSubtraction = false;
+		hasLearnMultiplication = false;
+		hasStudyAddition = true; // switch to false later
+		hasStudySubtraction = true; // switch to false later
+		hasStudyMultiplication = true; // switch to false later
+		
 		playerMaxKey = 3;
 		playerKey = 0;
 		hasKey = 0;

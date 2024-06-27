@@ -48,6 +48,7 @@ public class UI {
 	
 	public void createMainField() {
 		window = new JFrame(); 
+		window.setTitle("Quest for Knowledge");
 		window.setSize(800,600);
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		window.getContentPane().setBackground(Color.black);
@@ -206,18 +207,37 @@ public class UI {
 	
 	public void generateScene() {
 		// Scene 1 
-		createBackground(1,"grassfield.png");
-		createObject(1,420,100,300,255,"housetrees.png","Look","Talk","Rest","lookHut","talkHut","restHut");
-		createObject(1,50,180,150,150,"badboy.png","Look","Talk","Attack","lookGuard","talkGuard","attackGuard");
-		createObject(1,240,100,300,255,"chest.png","Look","Talk","Open","lookChest","talkChest","openChest");
+		createBackground(1,"School.png");
+		createObject(1,340,70,300,255,"blank.png","Look","Enter","","lookSchool","enterSchool","restHut");
+		createObject(1,170,180,100,150,"master.png","Look","Talk","Quest","lookMaster","talkMaster","questMaster");
 		createArrowButton(1,0,150,50,50,"sideleft.png","goScene2");
+		createArrowButton(1,650,150,50,50,"sideright.png","goScene5");
 		bgPanel[1].add(bgLabel[1]);
 		
 		// Scene 2
-		createBackground(2,"grasscave.jpg");
-		createObject(2,0,100,200,200,"blank.png","Look","Talk","Rest","lookHut","talkHut","restHut");
-		createArrowButton(2,650,150,50,50,"sideright.png","goScene1");
+		createBackground(2,"castle.png");
+		createObject(2,80,100,270,200,"blank.png","Look","Enter","","lookCastle","enterCastle","");
+		createArrowButton(2,650,200,50,50,"sideright.png","goScene1");
 		bgPanel[2].add(bgLabel[2]);
+		
+		// Scene 3
+		createBackground(3,"Library.jpg");
+		createObject(3,100,120,130,200,"blank.png","Look","Talk","Take a Quiz","lookTeacher","talkTeacher","takeQuiz2");
+		createArrowButton(3,650,200,50,50,"sideright.png","goScene1");
+		bgPanel[3].add(bgLabel[3]);
+		
+		// Scene 4
+		createBackground(4,"library.png");
+		createObject(4,170,150,100,150,"wizard.png","Look","Talk","Take a Quiz","lookWizard","talkWizard","takeQuiz3");
+		createArrowButton(4,0,150,50,50,"sideleft.png","goScene2");
+		bgPanel[4].add(bgLabel[4]);
+		
+		// Scene 5
+		createBackground(5,"grassfield.png");
+		createObject(5,600,100,200,200,"badboy.png","Look","Talk","Take a Quiz","lookFarmer","talkFarmer","takeQuiz1");
+		createObject(5,240,100,200,200,"chest.png","Look","Talk","Open","lookChest","talkChest","openChest");
+		createArrowButton(5,0,150,50,50,"sideleft.png","goScene1");
+		bgPanel[5].add(bgLabel[5]);
 		
 		
 		
