@@ -217,25 +217,28 @@ public class UI {
 		// Scene 2
 		createBackground(2,"castle.png");
 		createObject(2,80,100,270,200,"blank.png","Look","Enter","","lookCastle","enterCastle","");
+		createObject(2,470,270,100,100,"woodchest.png","Look","Talk","Open","lookChest","talkChest","openChest");
 		createArrowButton(2,650,200,50,50,"sideright.png","goScene1");
 		bgPanel[2].add(bgLabel[2]);
 		
 		// Scene 3
 		createBackground(3,"Library.jpg");
 		createObject(3,100,120,130,200,"blank.png","Look","Talk","Take a Quiz","lookTeacher","talkTeacher","takeQuiz2");
+		createObject(3,370,80,100,100,"glow.png","Look","Read","","lookSubtraction","readSubtraction","");
 		createArrowButton(3,650,200,50,50,"sideright.png","goScene1");
 		bgPanel[3].add(bgLabel[3]);
 		
 		// Scene 4
 		createBackground(4,"library.png");
 		createObject(4,170,150,100,150,"wizard.png","Look","Talk","Take a Quiz","lookWizard","talkWizard","takeQuiz3");
+		createObject(4,390,80,100,100,"glow.png","Look","Read","","lookMultiplication","readMultiplication","");
 		createArrowButton(4,0,150,50,50,"sideleft.png","goScene2");
 		bgPanel[4].add(bgLabel[4]);
 		
 		// Scene 5
-		createBackground(5,"grassfield.png");
-		createObject(5,600,100,200,200,"badboy.png","Look","Talk","Take a Quiz","lookFarmer","talkFarmer","takeQuiz1");
-		createObject(5,240,100,200,200,"chest.png","Look","Talk","Open","lookChest","talkChest","openChest");
+		createBackground(5,"Farm.png");
+		createObject(5,550,150,120,120,"farmer.png","Look","Talk","Take a Quiz","lookFarmer","talkFarmer","takeQuiz1");
+		createObject(5,200,130,100,100,"woodchest.png","Look","Talk","Open","lookChest","talkChest","readAddition");
 		createArrowButton(5,0,150,50,50,"sideleft.png","goScene1");
 		bgPanel[5].add(bgLabel[5]);
 		

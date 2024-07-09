@@ -7,7 +7,7 @@ import javax.swing.border.Border;
 
 import Main.GameManager;
 
-public class Quiz01 implements ActionListener{
+public class Quiz02 implements ActionListener{
 	GameManager gm;
 	
 	String[] questions = 	{
@@ -86,7 +86,7 @@ public class Quiz01 implements ActionListener{
 			}
 		});
 	
-	public Quiz01(GameManager gm) {
+	public Quiz02(GameManager gm) {
 this.gm = gm;
         
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -252,8 +252,7 @@ this.gm = gm;
         buttonD.setVisible(false);
         
         result = (int)((correct_guesses/(double)total_questions)*100);
-        gm.fr.setFirstScore(correct_guesses);
-        
+        gm.fr.setSecondScore(correct_guesses);
         
         textfield.setText("RESULTS!");
         textarea.setFont(new Font("Comic Sans MS", Font.BOLD, 25));

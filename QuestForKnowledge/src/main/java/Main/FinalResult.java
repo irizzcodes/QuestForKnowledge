@@ -21,42 +21,43 @@ public class FinalResult {
 	JTextField textfield = new JTextField();
 	JTextArea textarea = new JTextArea();
 	
-	public FinalResult (GameManager gm){
-		this.gm = gm;
-		
-		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		frame.setSize(500,500);
-		frame.getContentPane().setBackground(new Color(50,50,50));
-		frame.setLayout(null);
-		frame.setResizable(false);
-		
-		resultField.setBounds(0,0,500,50);
-		resultField.setBackground(new Color(25,25,25));
-		resultField.setForeground(new Color(25,255,0));
-		resultField.setFont(new Font("Ink Free",Font.BOLD,30));
-		resultField.setBorder(BorderFactory.createBevelBorder(1));
-		resultField.setHorizontalAlignment(JTextField.CENTER);
-		resultField.setEditable(false);
-		
-		textfield.setBounds(0,50,500,50);
-		textfield.setBackground(new Color(25,25,25));
-		textfield.setForeground(new Color(25,255,0));
-		textfield.setFont(new Font("Ink Free",Font.BOLD,30));
-		textfield.setBorder(BorderFactory.createBevelBorder(1));
-		textfield.setHorizontalAlignment(JTextField.CENTER);
-		textfield.setEditable(false);
-		
-		textarea.setBounds(0,100,500,400);
-		textarea.setLineWrap(true);
-		textarea.setWrapStyleWord(true);
-		textarea.setBackground(new Color(25,25,25));
-		textarea.setForeground(new Color(25,255,0));
-		textarea.setFont(new Font("MV Boli",Font.BOLD,20));
-		textarea.setBorder(BorderFactory.createBevelBorder(1));
-		textarea.setEditable(false);
+	public FinalResult(GameManager gm) {
+	    this.gm = gm;
+
+	    frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+	    frame.setSize(500, 500);
+	    frame.getContentPane().setBackground(new Color(255, 208, 246)); 
+	    frame.setLayout(null);
+	    frame.setResizable(false);
+
+	    resultField.setBounds(0, 0, 500, 50);
+	    resultField.setBackground(new Color(255, 204, 153)); // Light orange
+	    resultField.setForeground(new Color(0, 102, 204)); // Blue
+	    resultField.setFont(new Font("Comic Sans MS", Font.BOLD, 30));
+	    resultField.setBorder(BorderFactory.createLineBorder(new Color(255, 153, 51), 3)); // Orange border
+	    resultField.setHorizontalAlignment(JTextField.CENTER);
+	    resultField.setEditable(false);
+
+	    textfield.setBounds(0, 50, 500, 50);
+	    textfield.setBackground(new Color(239, 255, 153)); // Light orange
+	    textfield.setForeground(new Color(0, 102, 204)); // Blue
+	    textfield.setFont(new Font("Comic Sans MS", Font.BOLD, 26));
+	    textfield.setBorder(BorderFactory.createLineBorder(new Color(255, 153, 51), 3)); // Orange border
+	    textfield.setHorizontalAlignment(JTextField.CENTER);
+	    textfield.setEditable(false);
+
+	    textarea.setBounds(15, 100, 460, 400);
+	    textarea.setLineWrap(true);
+	    textarea.setWrapStyleWord(true);
+	    textarea.setBackground(new Color(255, 193, 229)); // Light yellow
+	    textarea.setForeground(new Color(102, 0, 204)); // Purple
+	    textarea.setFont(new Font("Comic Sans MS", Font.BOLD, 20));
+	    textarea.setBorder(BorderFactory.createLineBorder(new Color(255, 102, 204), 3));
+	    textarea.setEditable(false);
 	}
+
 		public void updateMaxScore() {
-			MaxScore = FirstScore + SecondScore + ThirdScore;
+			MaxScore = (FirstScore + SecondScore + ThirdScore);
 		}
 		
 		public void updateFinalResult() {
@@ -85,7 +86,7 @@ public class FinalResult {
 		String maxScoreperf = "";
 		
 		resultField.setText("RESULTS!");
-		textfield.setText("You got an average score of :"+ MaxScore);
+		textfield.setText("You got an overall score of: "+ MaxScore + "/30");
 		
 		// 1
 		if(FirstScore<4) {

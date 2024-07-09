@@ -24,9 +24,9 @@ public class Player {
 		hasLearnAddition = false; 
 		hasLearnSubtraction = false;
 		hasLearnMultiplication = false;
-		hasStudyAddition = true; // switch to false later
-		hasStudySubtraction = true; // switch to false later
-		hasStudyMultiplication = true; // switch to false later
+		hasStudyAddition = false; 
+		hasStudySubtraction = false; 
+		hasStudyMultiplication = false; 
 		
 		playerMaxKey = 3;
 		playerKey = 0;

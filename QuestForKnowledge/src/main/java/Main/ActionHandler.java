@@ -20,6 +20,11 @@ public class ActionHandler implements ActionListener {
 		case "lookChest": gm.ev1.lookChest();  break;
 		case "talkChest": gm.ev1.talkChest();  break;
 		case "openChest": gm.ev1.openChest();  break;
+		case "lookSubtraction": gm.ev1.lookSubtraction(); break;
+		case "lookMultiplication": gm.ev1.lookMultiplication(); break;
+		case "readAddition": gm.ev1.readAddition(); break;
+		case "readSubtraction": gm.ev1.readSubtraction(); break;
+		case "readMultiplication": gm.ev1.readMultiplication(); break;
 		
 		//Routes
 		case "lookSchool": gm.ev1.lookSchool(); break;

@@ -2,6 +2,8 @@ package Main;
 
 import Event.Event01;
 import Quizzes.Quiz01;
+import Quizzes.Quiz02;
+import Quizzes.Quiz03;
 
 public class GameManager {
 	

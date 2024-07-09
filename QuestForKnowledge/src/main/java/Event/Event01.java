@@ -3,6 +3,11 @@ package Event;
 import Main.FinalResult;
 import Main.GameManager;
 import Quizzes.Quiz01;
+import Quizzes.Quiz02;
+import Quizzes.Quiz03;
+import Lessons.Addition;
+import Lessons.Multiplication;
+import Lessons.Subtraction;
 
 public class Event01 {
 	GameManager gm;
@@ -20,8 +25,6 @@ public class Event01 {
 	}
 	
 	public void talkChest() {
-		gm.player.playerKey++;
-		gm.player.updatePlayerStatus();
 		gm.ui.messageText.setText("You talk to the chest but nothing happen");
 	}
 	
@@ -35,6 +38,54 @@ public class Event01 {
 			gm.ui.messageText.setText("You open the chest and find nothing");
 		}
 	}
+	
+	public void lookSubtraction() {
+		gm.ui.messageText.setText("A book containing knowledge of subtraction");
+	}
+	
+	public void lookMultiplication() {
+		gm.ui.messageText.setText("A book containing knowledge of multiplication");
+	}
+	
+	public void readAddition() {
+		if(gm.player.hasStudyAddition==false) {
+			gm.ui.messageText.setText("You have studied addition from the book in the chest");
+			Addition addition = new Addition(gm);
+			gm.player.hasStudyAddition=true;
+			gm.player.updatePlayerStatus();
+		}
+		else {
+			Addition addition = new Addition(gm);
+			gm.ui.messageText.setText("You reviewed addition from the book in the chest");
+		}
+	}
+	
+	public void readSubtraction() {
+		if(gm.player.hasStudySubtraction==false) {
+			gm.ui.messageText.setText("You have studied subtraction");
+			Subtraction sub = new Subtraction(gm);
+			gm.player.hasStudySubtraction=true;
+			gm.player.updatePlayerStatus();
+		}
+		else {
+			Subtraction sub = new Subtraction(gm);
+			gm.ui.messageText.setText("You reviewed subtraction");
+		}
+	}
+	
+	public void readMultiplication() {
+		if(gm.player.hasStudyMultiplication==false) {
+			gm.ui.messageText.setText("You have studied multiplication");
+			Multiplication mul = new Multiplication(gm);
+			gm.player.hasStudyMultiplication=true;
+			gm.player.updatePlayerStatus();
+		}
+		else {
+			Multiplication mul = new Multiplication(gm);
+			gm.ui.messageText.setText("You reviewed multiplication");
+		}
+	}
+	
 	
 	// Routes
 	
@@ -151,7 +202,7 @@ public class Event01 {
 	public void takeQuiz2() {
 		if (gm.player.hasLearnSubtraction == false) {
 			if (gm.player.hasStudySubtraction == true) {
-				//Quiz02 quiz2 = new Quiz02(gm);
+				Quiz02 quiz2 = new Quiz02(gm);
 				gm.player.playerKey++;
 				gm.player.updatePlayerStatus();
 				gm.player.hasLearnSubtraction = true;
@@ -171,7 +222,7 @@ public class Event01 {
 	public void takeQuiz3() {
 		if (gm.player.hasLearnMultiplication == false) {
 			if (gm.player.hasStudyMultiplication == true) {
-				//Quiz03 quiz3 = new Quiz03(gm);
+				Quiz03 quiz3 = new Quiz03(gm);
 				gm.player.playerKey++;
 				gm.player.updatePlayerStatus();
 				gm.player.hasLearnMultiplication = true;
